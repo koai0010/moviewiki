@@ -19,7 +19,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+def testing_error(request):
+    division_by_zero = 1 / 0
+
 urlpatterns = [
+    path('sentry-debug/', testing_error),
     path('admin/', admin.site.urls),
     path('moviewiki/', include('moviewiki.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
