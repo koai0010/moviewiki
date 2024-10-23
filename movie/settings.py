@@ -163,3 +163,9 @@ sentry_sdk.init(
         "continuous_profiling_auto_start": True,
     },
 )
+
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
