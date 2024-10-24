@@ -25,6 +25,7 @@ class Movie(BaseModels):
     overview = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     release_date = models.DateField()
+    background_path = models.CharField(max_length=300)
     genre = models.ManyToManyField(Genre)
     poster = models.ManyToManyField(Poster)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
